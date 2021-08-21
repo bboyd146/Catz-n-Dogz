@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/bboyd146/Catz-n-Dogz/issues"
   },
-  "homepage": "https://github.com/bboyd146/Catz-n-Dogz#readme"
+  "homepage": "https://github.com/bboyd146/Catz-n-Dogz#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
