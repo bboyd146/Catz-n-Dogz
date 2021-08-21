@@ -7,7 +7,13 @@ We are creating an app that will allow users to post information about stray/los
 - front and back end and/or side work: Ozzy
 
 # Features/User Acceptance Criteria
+* It's done when a user is able to create an account through the app.
+
+* It's done when a user is able to make a post regarding a stray animal
+
+* It's done when a user is able to locate the nearest animal shelter from their location. 
+
+* It's done when a user is able to update their post if the animal has been dropped off at an animal shelter.
 
 
-# Database Diagram
 
