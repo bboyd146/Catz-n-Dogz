@@ -22,7 +22,7 @@ Dog.init(
         breed: {
             type: DataTypes.STRING,
             allowNull: true,
-        },
+        }
     },
     {
         sequelize,
