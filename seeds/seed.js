@@ -1,5 +1,6 @@
 const sequelize = require('../config/connection');
-const { Cat, Dog, User } = require('../models');
+const { Cat, Dog } = require('../models');
+const User = require('../models/User');
 
 const catSeedData = require('./catseeds');
 const dogSeedData = require('./dogseeds');
@@ -12,8 +13,12 @@ const seedDatabase = async () => {
 
     const cats = await Cat.bulkCreate(catSeedData);
 console.log(cats);
+
     const dogs = await Dog.bulkCreate(dogSeedData);
 console.log(dogs)
+
+    const user = await User.bulkCreate(userData);
+    console.log(user);
     process.exit(0);
 };
 
