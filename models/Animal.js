@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../config/connection.js');
 
-class Dog extends Model { }
+class Animal extends Model { }
 
-Dog.init(
+Animal.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,17 +11,9 @@ Dog.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        sex: {
+        animal_name: {
             type: DataTypes.STRING,
-            allowNull: true,
-        },
-        is_stray: {
-            type: DataTypes.BOOLEAN,
             allowNull: false,
-        },
-        breed: {
-            type: DataTypes.STRING,
-            allowNull: true,
         }
     },
     {
@@ -29,8 +21,8 @@ Dog.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'dog'
+        modelName: 'animal',
     }
 );
 
-module.exports = Dog;
+module.exports = Animal;

@@ -1,8 +1,17 @@
-const Dog = require('./Dog');
-const Cat = require('./Cat');
-const User = require('./User');
+const Pet = require('./Pet');
+const Animal = require('./Animal');
 
-module.exports = { Cat, Dog, User };
+
+
+Pet.belongsTo(Animal)
+
+Animal.hasMany(Pet)
+
+module.exports = {
+    Pet,
+    Animal,  
+};
+
 
 
 
