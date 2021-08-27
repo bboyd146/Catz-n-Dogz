@@ -3,18 +3,22 @@
     "pet_name": "Max",    
     "sex": "Male",
     "is_stray": "true",
-    "breed": "Pug"
+    "breed": "Pug",
+    "animal_id": 1
 },
 {
     "pet_name": "Jeff",
     "sex": "Male",
     "is_stray": "false",
-    "breed": "German Shepherd"
+    "breed": "German Shepherd",
+    "animal_id": 1
 },
 {
     "pet_name": "Bitey",
     "sex": "Female",
     "is_stray": "true",
-    "breed": "Pitbull"
+    "breed": "Pitbull",
+    "animal_id": 2
+    
 }
 ]

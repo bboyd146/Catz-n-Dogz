@@ -1,11 +1,11 @@
 [
     {
         "animal_name": "Dog"
-},
-{
-    "animal_name": "Dog"
-},
-{
-    "animal_name": "Cat"
-}
+    },
+    {
+        "animal_name": "Dog"
+    },
+    {
+        "animal_name": "Cat"
+    }
 ]
