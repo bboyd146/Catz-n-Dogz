@@ -30,7 +30,12 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        const petData = await Pet.create(req.body);
+        const petData = await Pet.create({
+            pet_name: req.body.pet_name,
+            sex: req.body.sex,
+            is_stray: req.body.is_stray,
+            breed: req.body.breed,
+            animal_id: req.body.animal_id,});
         res.status(200).json({ message: 'New Pet has been added!' });
     } catch (err) {
         res.status(400).json(err);

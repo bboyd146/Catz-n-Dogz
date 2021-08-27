@@ -27,7 +27,9 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        const petData = await Animal.create(req.body);
+        const petData = await Animal.create({
+            animal_name: req.body.animal_name,
+        });
         res.status(200).json({ message: 'New Animal has been created!' });
     } catch (err) {
         res.status(400).json(err);
