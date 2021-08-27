@@ -7,6 +7,6 @@ const userRoutes = require('./UserRoutes');
 
 router.use('/cat', catRoutes);
 router.use('/dog', dogRoutes);
-router.get('/users', userRoutes);
+router.use('/users', userRoutes);
 
 module.exports = router;
