@@ -1,10 +1,11 @@
 const router = require('express').Router();
 const Pet = require('../../models/Pet');
+const Animal = require('../../models/Animal');
 
 router.get('/', async (req, res) => {
     try {
         const petData = await Pet.findAll({
-            include: [{ model: Animal }]
+            
         });
         res.status(200).json(petData);
     } catch (err) {
@@ -15,7 +16,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const petData = await Pet.findByPk(req.params.id, {
-            include: [{ model: Animal }]
+            
         });
         if (!petData) {
             res.status(404).json({ message: 'No Pet found with that id!' });
