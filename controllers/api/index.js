@@ -1,12 +1,9 @@
 const router = require('express').Router();
 
-
-const catRoutes = require('./cat-routes.js');
-const dogRoutes = require('./dog-routes');
+const petRoutes = require('./pet-routes');
 const userRoutes = require('./UserRoutes');
 
-router.use('/cat', catRoutes);
-router.use('/dog', dogRoutes);
-router.use('/users', userRoutes);
+router.use('/pet', petRoutes);
+router.use('/user', userRoutes);
 
 module.exports = router;

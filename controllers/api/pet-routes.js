@@ -1,10 +1,12 @@
 const router = require('express').Router();
-const Dog = require('../../models/Dog');
+const Pet = require('../../models/Pet');
 
 router.get('/', async (req, res) => {
     try {
-        const dogData = await Dog.findAll();
-        res.status(200).json(dogData);
+        const petData = await Pet.findAll({
+            include: [{ model: Animal }]
+        });
+        res.status(200).json(petData);
     } catch (err) {
         res.status(400).json(err);
     }
@@ -12,12 +14,14 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     try {
-        const dogData = await Dog.findByPk(req.params.id,);
-        if (!dogData) {
-            res.status(404).json({ message: 'No dog found with that id!' });
+        const petData = await Pet.findByPk(req.params.id, {
+            include: [{ model: Animal }]
+        });
+        if (!petData) {
+            res.status(404).json({ message: 'No Pet found with that id!' });
             return;
         }
-        res.status(200).json(dogData);
+        res.status(200).json(petData);
     } catch (err) {
         res.status(500).json(err);
     }
@@ -25,8 +29,8 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        const dogData = await Dog.create(req.body);
-        res.status(200).json(dogData);
+        const petData = await Pet.create(req.body);
+        res.status(200).json(petData);
     } catch (err) {
         res.status(400).json(err);
     }
@@ -34,10 +38,10 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
     try {
-        const dogData = await Dog.update(req.body, {
+        const petData = await Pet.update(req.body, {
             where: { id: req.params.id }
         });
-        res.status(200).json(dogData);
+        res.status(200).json(petData);
     } catch (err) {
         res.status(500).json(err);
     }
@@ -45,16 +49,16 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
     try {
-        const dogData = await Dog.destroy({
+        const petData = await Pet.destroy({
             where: {
                 id: req.params.id,
             },
         });
-        if (!dogData) {
-            res.status(404).json({ message: 'No dog with this id!' });
+        if (!petData) {
+            res.status(404).json({ message: 'No Pet with this id!' });
             return;
         }
-        res.status(200).json(dogData);
+        res.status(200).json(petData);
     } catch (err) {
         res.status(500).json(err);
     }

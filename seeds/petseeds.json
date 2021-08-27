@@ -1,17 +1,20 @@
 [
     {
+    "pet_name": "Max",    
     "sex": "Male",
     "is_stray": "true",
-    "breed": "Sphynx"
+    "breed": "Pug"
 },
 {
+    "pet_name": "Jeff",
     "sex": "Male",
     "is_stray": "false",
-    "breed": "Scottish Fold"
+    "breed": "German Shepherd"
 },
 {
+    "pet_name": "Bitey",
     "sex": "Female",
     "is_stray": "true",
-    "breed": "Scottish Fold"
+    "breed": "Pitbull"
 }
 ]
