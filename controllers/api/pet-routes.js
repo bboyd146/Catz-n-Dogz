@@ -30,8 +30,13 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        const petData = await Pet.create(req.body);
-        res.status(200).json(petData);
+        const petData = await Pet.create({
+            pet_name: req.body.pet_name,
+            sex: req.body.sex,
+            is_stray: req.body.is_stray,
+            breed: req.body.breed,
+            animal_id: req.body.animal_id,});
+        res.status(200).json({ message: 'New Pet has been added!' });
     } catch (err) {
         res.status(400).json(err);
     }
@@ -42,7 +47,7 @@ router.put('/:id', async (req, res) => {
         const petData = await Pet.update(req.body, {
             where: { id: req.params.id }
         });
-        res.status(200).json(petData);
+        res.status(200).json({ message: 'This Pet has been updated!' });
     } catch (err) {
         res.status(500).json(err);
     }
@@ -59,11 +64,10 @@ router.delete('/:id', async (req, res) => {
             res.status(404).json({ message: 'No Pet with this id!' });
             return;
         }
-        res.status(200).json(petData);
+        res.status(200).json({ message: 'This Pet has been deleted!' });
     } catch (err) {
         res.status(500).json(err);
     }
-    // delete a category by its `id` value
 });
 
 
