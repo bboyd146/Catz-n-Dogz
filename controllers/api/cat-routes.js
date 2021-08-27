@@ -26,4 +26,20 @@ router.get('/:id', async (req, res) => {
     }
 });
 
+router.post('/', async (req, res) => {
+    try {
+        const catData = await Cat.create({
+            sex: req.body.sex,
+            is_stray: req.body.is_stray,
+            breed: req.body.breed,
+        });
+        console.log(catData)
+        res.status(200).json(catData)
+        console.log(catData);
+
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
 module.exports = router;

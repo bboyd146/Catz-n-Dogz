@@ -11,7 +11,6 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 
-app.use(controllers);
 
 const PORT = process.env.PORT || 3001;
 
@@ -32,6 +31,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(controllers);
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening', + PORT));
