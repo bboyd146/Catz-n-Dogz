@@ -42,4 +42,25 @@ router.post('/', async (req, res) => {
     }
 });
 
+router.put('/:id', async (req, res) => {
+    try {
+        const catData = await Cat.update(req.body, {
+            where: { id: req.params.id }
+        });
+        res.status(200).json({ message: 'This cat has been updated!' });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.delete('/:id', async (req, res) => {
+    try {
+        const catData = await Cat.destroy({
+            where: { id: req.params.id }
+        });
+        res.status(200).json({ message: 'This cat has been Deleted!' });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 module.exports = router;
