@@ -1,21 +1,21 @@
 const sequelize = require('../config/connection');
-const { Cat, Dog } = require('../models');
+const { Animal, Pet } = require('../models');
 const User = require('../models/User');
 
-const catSeedData = require('./catseeds');
-const dogSeedData = require('./dogseeds');
+const animalSeedData = require('./animalseeds');
+const petSeedData = require('./petseeds');
 const userData = require('./userData.json');
 
-console.log(catSeedData)
+console.log(animalSeedData)
 
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });
 
-    const cats = await Cat.bulkCreate(catSeedData);
-console.log(cats);
+    const animals = await Animal.bulkCreate(animalSeedData);
 
-    const dogs = await Dog.bulkCreate(dogSeedData);
-console.log(dogs)
+
+    const pets = await Pet.bulkCreate(petSeedData);
+
 
     const user = await User.bulkCreate(userData);
     console.log(user);
