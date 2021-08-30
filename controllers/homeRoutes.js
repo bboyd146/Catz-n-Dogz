@@ -18,14 +18,43 @@ router.get('/', async (req, res) => {
             animal.get({ plain: true })
         );
 
-        res.render('animal', {
-            animals: {},
-            loggedIn: req.session.loggedIn,
+        res.render('homepage', {
+            layout: 'main',
+            animals
         });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
     }
+});
+
+router.get('/animal/:id', async (req, res) => {
+    // if (!req.session.loggedIn) {
+    //     res.redirect('/login');
+    // } else {
+        try {
+            const animalData = await Animal.findByPk(req.params.id, {
+                include: [
+                    {
+                        model: Pet,
+                        attributes: [
+                            'id',
+                            'pet_name',
+                            'sex',
+                            'is_stray',
+                            'breed',
+                        
+                        ],
+                    },
+                ],
+            });
+            const animal = animalData.get({ plain: true });
+            res.render('animal', { animal});
+        } catch (err) {
+            console.log(err);
+            res.status(500).json(err);
+        }
+    // }
 });
 
 router.get('/login', (req, res) => {
@@ -43,4 +72,4 @@ router.get('/login', (req, res) => {
 
 
 
-module.exports = router; 
+module.exports = router;
