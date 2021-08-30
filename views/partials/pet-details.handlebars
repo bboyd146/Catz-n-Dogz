@@ -3,6 +3,11 @@
         <header>{{pet_name}}</header>
 
         <div class="card-body">
+            <img src="/images/{{filename}}" alt="{{description}}" id="img-preview" />
+            <label class="file-upload-container" for="file-upload">
+                <input id="file-upload" type="file" style="display:none;">
+                Select an Image
+            </label>
             <p>Breed: {{breed}}</p>
             <ul>
                 <li>Sex: {{sex}}</li>
