@@ -1,14 +1,40 @@
+body {
+    background-color: mediumaquamarine;
+}
+
 h1 {
     font-size: 150px;
     text-align: center;
     font-family: 'Zen Tokyo Zoo', cursive;
+    color: mintcream;
+}
+
+h2 {
+    color: mintcream;
+    text-align: center;
+}
+
+.btn {
+    color: mintcream;
+    vertical-align: middle;
+}
+
+a:link {
+    color: white;
+}
+
+
+.row {
+    justify-content: center;
 }
 
 p {
     font-size: 30px;
     text-align: center;
+    color: mintcream;
 }
 
 footer {
     text-align: center;
+    color: mintcream;
 }
