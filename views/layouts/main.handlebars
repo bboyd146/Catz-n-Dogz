@@ -18,9 +18,11 @@
         {{else}}
         <a href="/login">Login</a>
         {{/if}}
-        <div class ="fileUpload">
-        <button id="file-upload" >Upload</button>
-        </div>
+        <img src="" id="img-preview" />
+        <label class="file-upload-container" for="file-upload">
+                <input id="file-upload" type="file" style="display:none;">
+                Select an Image
+                </label>
     </nav>
 
     <header>
@@ -42,7 +44,7 @@
         &copy; Catz-n-Dogz
     </footer>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="../../public/js/cloudinary.js"</script>
+<script src="/js/cloudinary.js"></script>
 </body>
 
 </html>
