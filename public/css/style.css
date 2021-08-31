@@ -2,6 +2,10 @@ body {
     background-color: mediumaquamarine;
 }
 
+header{
+    margin-top: 5rem;
+}
+
 h1 {
     font-size: 150px;
     text-align: center;
@@ -25,7 +29,6 @@ a:link {
 
 *, ::after, ::before {
     box-sizing: border-box;
-    
 }
 
 .row {
@@ -50,7 +53,6 @@ footer {
 
 .card {
     position: relative;
-    display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
