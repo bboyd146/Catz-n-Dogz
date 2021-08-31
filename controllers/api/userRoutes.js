@@ -1,4 +1,5 @@
 const router = require("express").Router();
+
 const User = require("../../models/User");
 
 router.get('/', async (req, res) => {
@@ -12,7 +13,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     try {
-        const userData = await User.findByPk(req.params.id,);
+        const userData = await User.findByPk(req.params.id);
         if (!userData) {
             res.status(404).json({ message: 'No user found with that id!' });
             return;
@@ -24,8 +25,14 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
+console.log('REQ>BOYD', req.body)
     try {
-        const userData = await User.create(req.body);
+        const userData = await User.create({
+            name: req.body.username,
+            email: req.body.email,
+            password: req.body.password
+
+        })
 
         req.session.save(() => {
             req.session.user_id = userData.id;
@@ -34,6 +41,7 @@ router.post("/", async (req, res) => {
             res.status(200).json(userData);
         });
     } catch (err) {
+   
         res.status(400).json(err);
     }
 });
