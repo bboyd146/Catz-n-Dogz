@@ -15,7 +15,7 @@ h2 {
 }
 
 .btn {
-    color: mintcream;
+    color: rgb(214, 22, 134);
     vertical-align: middle;
 }
 
@@ -23,18 +23,42 @@ a:link {
     color: white;
 }
 
+*, ::after, ::before {
+    box-sizing: border-box;
+    
+}
 
 .row {
-    justify-content: center;
+    /* display: -ms-flexbox; */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
 p {
     font-size: 30px;
     text-align: center;
-    color: mintcream;
+   
 }
 
 footer {
     text-align: center;
     color: mintcream;
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 18rem;
+    margin: 10px;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
 }
