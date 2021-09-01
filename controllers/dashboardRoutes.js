@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const User = require('../models/User');
+const  { Pet, Animal } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -38,15 +38,17 @@ router.get('/', withAuth, async (req, res) => {
         );
 
         res.render('homepage', {
-            layout: 'main',
+            layout: 'dashboard',
             animals,
-            loggedIn: true,
+            loggedIn: true
         });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
     }
 });
+
+
 
 
 module.exports = router

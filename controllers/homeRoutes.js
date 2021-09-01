@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Animal, Pet } = require('../models');
-const User = require('../models/User');
-const withAuth = require('../utils/auth');
+
 
 router.get('/', async (req, res) => {
     try {
@@ -66,6 +65,16 @@ router.get('/login', (req, res) => {
 
     res.render('login');
 });
+
+router.get('/signup', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+
+    res.render('login');
+});
+
 
 
 
