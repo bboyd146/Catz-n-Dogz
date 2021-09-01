@@ -1,6 +1,7 @@
-<section class="card">
+{{!-- <section class="card">
     <a href="/animal/{{id}}">
         <header>{{animal.animal_name}}</header>
+<<<<<<< HEAD
     
             <h2>{{pet_name}}</h2>
     
@@ -11,11 +12,51 @@
                 Upload an Image 
                 </label> --}}
             <p>Breed: {{breed}}</p>
+=======
+    </a>
+    <h2>{{pet_name}}</h2>
+
+    <div class="card-body">
+        <img src="" id="img-preview" />
+        <label class="file-upload-container" for="file-upload">
+            <input id="file-upload" type="file" style="display:none;">
+            Select an Image
+        </label>
+        <p>Breed: {{breed}}</p>
+        <ul>
+            <li>Sex: {{sex}}</li>
+            <li>No collar found?: {{is_stray}}</li>
+        </ul>
+    </div>
+    </a>
+</section> --}}
+
+    <div class="card mb-4 shadow-sm">
+        <a href="/animal/{{id}}">
+            <header>{{animal.animal_name}}</header>
+        </a>
+        <h2>{{pet_name}}</h2>
+        <img class="card-img-top" src="" id="img-preview" />
+        <label class="file-upload-container" for="file-upload">
+            <input id="file-upload" type="file" style="display:none;">
+            Select an Image
+        </label>
+        <div class="card-body">
+            <p class="card-text">Breed: {{breed}}</p>
+>>>>>>> main
             <ul>
                 <li>Sex: {{sex}}</li>
                 <li>No collar found?: {{is_stray}}</li>
             </ul>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">Days ago</small>
+            </div>
         </div>
+<<<<<<< HEAD
     </a>
 </section>
 
@@ -24,3 +65,15 @@
 
 
 
+=======
+    </div>
+
+    {{!-- <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> --}}
+>>>>>>> main
