@@ -18,9 +18,9 @@ router.get('/', async (req, res) => {
         );
 
         res.render('homepage', {
-            layout: 'main',
+            layout: 'dashboard',
             animals,
-
+            loggedIn: true
         });
     } catch (err) {
         console.log(err);
