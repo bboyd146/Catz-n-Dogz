@@ -12,9 +12,9 @@ router.get('/', withAuth, (req, res) => {
     .then(dbUserData =>{
         const users = dbUserData.map((user) => user.get({ plain: true }));
 
-        res.render("pet-details", {
+        res.render("animal-details", {
             layout: "dashboard",
-            users
+            
         });
     })
     .catch(err => {
