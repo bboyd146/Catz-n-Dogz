@@ -21,7 +21,7 @@ Post.belongsTo(User, {
     foreignKey: 'user_id'
 })
 
-Post.hasOne(Animal)
+Post.hasMany(Animal)
 
 module.exports = {
     Pet,
