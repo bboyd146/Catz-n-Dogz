@@ -23,18 +23,20 @@
     <header>
         <div class="title">
             <h1><strong>Catz-n-Dogz</strong></h1>
+
             <style>
                 @import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
             </style>
             <p>You're Logged In!!</p>
+
+            <p>Lost or found a beloved friend?<br>We can help!</p>
+
         </div>
     </header>
     <main class="col-auto">
         {{{body}}}
     </main>
-    {{#if loggedIn}}
-    <script src="/js/logout.js"></script>
-    {{/if}}
+
     <footer class="flex-row justify-center">
         &copy; Catz-n-Dogz
     </footer>
@@ -42,8 +44,11 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="/js/cloudinary.js"></script>
 
+
+    {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+
 </body>
 
 </html>
-
-<script src="/js/login.js"></script>
