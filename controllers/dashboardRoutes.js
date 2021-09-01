@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const  { Pet, Animal } = require('../models');
+const  { Pet, Animal, Post } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -24,7 +24,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
     try {
-        const petData = await Pet.findAll({
+        const petData = await Post.findAll({
             include: [
                 {
                     model: Animal,
