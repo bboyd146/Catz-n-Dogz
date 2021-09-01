@@ -40,7 +40,7 @@ router.get('/', withAuth, async (req, res) => {
         res.render('homepage', {
             layout: 'dashboard',
             animals,
-            loggedIn: true
+            loggedIn: req.session.logged_in,
         });
     } catch (err) {
         console.log(err);
