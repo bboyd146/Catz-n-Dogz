@@ -13,9 +13,13 @@ Animal.hasMany(Pet, {
     foreignKey: 'animal_id',
 })
 
-User.hasMany(Post)
+User.hasMany(Post, {
+    foreignKey: 'user_id'
+})
 
-Post.belongsTo(User)
+Post.belongsTo(User, {
+    foreignKey: 'user_id'
+})
 
 Post.hasOne(Animal)
 
