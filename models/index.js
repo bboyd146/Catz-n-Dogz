@@ -6,6 +6,8 @@ const PostPet = require('./PostPet');
 
 
 
+
+
 Pet.belongsTo(Animal, {
     foreignKey: 'animal_id',
 })
@@ -24,15 +26,17 @@ Post.belongsTo(User, {
 
 Post.hasMany(Animal)
 
+Pet.belongsToMany(Post, {through: PostPet})
+
 Post.belongsToMany(Pet, {through: PostPet})
 
-Pet.belongsToMany(Post, {through: PostPet})
 
 module.exports = {
     Pet,
     Animal, 
     User,
-    Post, 
+    Post,
+    PostPet,
 };
 
 

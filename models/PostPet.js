@@ -13,18 +13,18 @@ PostPet.init(
             autoIncrement: true,
         },
 
-        post_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'post',
-                key: 'id',
-            }
-        },
-
         pet_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'pet',
+                key: 'id',
+            }
+        },
+
+        tag_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'post',
                 key: 'id',
             }
         }
