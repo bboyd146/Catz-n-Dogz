@@ -2,16 +2,16 @@
   {
     "name": "Oz",
     "email": "oz@hotmail.com",
-    "password": "password12345"
+    "password": "password"
   },
   {
     "name": "Bradley",
     "email": "bradley@gmail.com",
-    "password": "password12345"
+    "password": "password"
   },
   {
     "name": "Josh",
     "email": "josh@aol.com",
-    "password": "password12345"
+    "password": "password"
   }
 ]
