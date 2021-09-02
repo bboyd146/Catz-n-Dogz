@@ -170,33 +170,15 @@ height: 200px;
 margin: 20px auto 0;
 }
 
-.move {
-animation: move-animation 5s infinite;
-} 
-
-.walking {
-animation: walk-animation 5s steps(12) infinite;
-background: url("/images/cat_tiles.png") 0 0 no-repeat;
-}
-
-.sitting {
-animation: sit-animation 2s steps(6) infinite;
-background: url("/images/cat_tiles.png") 0 0 no-repeat;
-}
-
-.running{
-    animation: running-animation 5s steps(12) infinite;
-    background: url("/images/cat_tiles.png") 0 0 no-repeat;
-}
 
 .walk-then-sit-then-run {
-animation: running-animation 3s steps(12) 1, sit-animation 3s 3s steps(6) 1, walk-animation 3s 6s steps(12) 1;
+animation: running-animation 3s steps(12), sit-animation 3s 3s steps(6), walk-animation 4s 5s steps(12);
 background: url("/images/cat_tiles.png") 0 0 no-repeat;
 }
 
 @keyframes walk-animation {
 from {
-        margin-left: 20%;
+        margin-left: 40%;
         background-position: 0 0;
 }
 
@@ -206,15 +188,6 @@ to {
 }
 }
 
-@keyframes move-animation {
-from {
-margin-left: 320%;
-}
-
-to {
-margin-left: 20%;
-}
-}
 
 @keyframes sit-animation {
 from {
@@ -233,7 +206,7 @@ background-position: -400px -1200px;
     }
     
     to {
-        margin-left: 40%;
+        margin-left: 45%;
         background-position: -800px -2391px;
     }
     }
