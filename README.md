@@ -2,10 +2,17 @@
 
 ## Description
 
+This is an app that allows users to post lost or found animals! 
+## Table of Contents
+- [Links](#links)
+- [Usage](#usage)
+- [Resources](#resources)
+- [Credits](#credits)
+- [Licenses](#licenses)
 
 ## Links
 
-Repository Link: 
+Repository Link: https://github.com/bboyd146/Catz-n-Dogz
 
 Deployed Website Link: 
 ## Usage
@@ -13,15 +20,15 @@ Deployed Website Link:
 Once deployed, the application appears as the image attached below on a traditional desktop.
 
 
-
 ## Resources
 
-
+This app was made with Node.js, Javascript, CSS, and Cloudinary
 
 
 ## Credits
 
 Collaborations of this project include the instructional staff, TAs, and fellow classmates in the Rice University Coding Bootcamp 2021 Cohort.
+
 
 ## Licenses
 
