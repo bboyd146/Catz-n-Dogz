@@ -208,12 +208,9 @@ background-position: -400px -1200px;
     }
 
     div.col-md-6{
-        justify-content:flex-start;
-        margin:auto;
+        justify-content:center;
+        
     } 
 
-    div.form-group{
-        display: flex;    
-    }
-
+    
 
