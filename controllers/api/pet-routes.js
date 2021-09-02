@@ -35,9 +35,9 @@ router.post('/', async (req, res) => {
     console.log(req.body)
     try {
         const petData = await Pet.create({
-            pet_name: "test name",
+            pet_name: req.body.newName,
             sex: req.body.newGender,
-            description: "tester",
+            description: req.body.newDetails,
             is_stray: true,
             breed: req.body.newBreed,
             animal_id: parseInt(req.body.newType),
