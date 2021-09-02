@@ -32,6 +32,14 @@ Pet.init(
             type: DataTypes.STRING,
             allowNull: true,
         },
+        description: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        filename: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
 
         animal_id: {
             type: DataTypes.INTEGER,

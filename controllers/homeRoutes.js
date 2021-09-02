@@ -1,31 +1,21 @@
 const router = require('express').Router();
-const { Animal, Pet, Post } = require('../models');
+const { Animal, Pet, Post, PostPet } = require('../models');
 
 
 router.get('/', async (req, res) => {
     try {
-        const petData = await Post.findAll({
-            include: [
-                {
-                    model: Pet,
-                    attributes: [                             'id',
-                    'pet_name',
-                    'sex',
-                    'is_stray',
-                    'breed',
-                ]
-                },
-            ],
-        });
+        const petData = await Pet.findAll({
+            include: [{ model: Animal},
 
+         ],
+        });
         const animals = petData.map((animal) =>
-            animal.get({ plain: true })
+        animal.get({ plain: true })
         );
+        
 
         res.render('homepage', {
-            layout: 'main',
-            animals,
-
+            animals
         });
     } catch (err) {
         console.log(err);
