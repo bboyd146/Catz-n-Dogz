@@ -53,62 +53,70 @@
     </div>
 
 
-    
-        <div class="container register">
-            <div class="row">
 
-                
-                        <h3 class="register-heading">Post A Pet</h3>
-                        <div class="row register-form" id="post-form">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="newBreed" placeholder="Breed *" value="" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="newGender" placeholder="Male/Female *" value="" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="newContact" placeholder="Contact Info *" value="" />
-                                </div>
-                                <div class="form-group">
+    <div class="container register">
+        <div class="row">
 
-                                </div>
 
-                                <div class="form-group">
-                                    <div class="maxl">
-                                        <label class="radio inline">
-                                            <input type="radio" name="lostFound" value="lost">
-                                            <span> Lost </span>
-                                        </label>
-                                        <label class="radio inline">
-                                            <input type="radio" name="lostFound" value="found">
-                                            <span>Found </span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Cat/Dog *" value="" />
-                                </div>
-                                <input type="submit" class="btn btn-warning" value="Upload" />
-                            </div>
-                        </div>
+            <h3 class="register-heading">Post A Pet</h3>
+            <form class="row register-form" id="post-form">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="newBreed" placeholder="Breed *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="newGender" placeholder="Male/Female *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="newContact" placeholder="Contact Info *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <img class="card-img-top" src="" id="img-preview" />
+                        <label class="file-upload-container" for="file-upload">
+                            <input id="file-upload" type="file" style="display:none;">
+                            Upload an Image
+                        </label>
                     </div>
 
+                    <div class="form-group">
+                        <div class="maxl">
+                            <label class="radio inline">
+                                <input type="radio" name="lostFound" value="lost">
+                                <span> Lost </span>
+                            </label>
+                            <label class="radio inline">
+                                <input type="radio" name="lostFound" value="found">
+                                <span>Found </span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <select class="form-select" id="animal-type">
+                            <option selected>Open this select menu</option>
+                            <option value="1">Dog</option>
+                            <option value="2">Cat</option>
 
+                        </select>
+                    </div>
+                    <input type="submit" class="btn btn-warning" value="Upload" />
+                </div>
+            </form>
         </div>
-        <main class="col-auto"></main>
-        {{{body}}}
+
+    </div>
+    </div>
+
+    </div>
+    <main class="col-auto"></main>
+    {{{body}}}
     </main>
 
 
     <footer class="flex-row justify-center margin-bottom">
         &copy; Catz-n-Dogz
     </footer>
-
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/js/cloudinary.js"></script>
     {{#if loggedIn}}

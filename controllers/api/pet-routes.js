@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const { Pet, Animal } = require('../../models');
-
+const cloudinary = require('cloudinary').v2;
+const { promisify } = require('util');
+const upload = promisify(cloudinary.uploader.upload);
 
 router.get('/', async (req, res) => {
     try {
@@ -16,7 +18,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const petData = await Pet.findByPk(req.params.id, {
-            include: [{model: Animal}]
+            include: [{ model: Animal }]
         });
         if (!petData) {
             res.status(404).json({ message: 'No Pet found with that id!' });
@@ -29,13 +31,18 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
+    console.log('DJKLA;SAJSKLHDKSAFHKAKVLDKJFLASBVKJDBVKLSBHVJCLBF')
+    console.log(req.body)
     try {
         const petData = await Pet.create({
-            pet_name: req.body.pet_name,
-            sex: req.body.sex,
-            is_stray: req.body.is_stray,
-            breed: req.body.breed,
-            animal_id: req.body.animal_id,});
+            pet_name: "test name",
+            sex: req.body.newGender,
+            description: "tester",
+            is_stray: true,
+            breed: req.body.newBreed,
+            animal_id: parseInt(req.body.newType),
+            filename: req.body.newFile,
+        });
         res.status(200).json({ message: 'New Pet has been added!' });
     } catch (err) {
         res.status(400).json(err);
