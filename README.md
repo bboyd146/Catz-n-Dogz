@@ -1,4 +1,7 @@
+
 # Catz-n-Dogz
+
+<img width="805" alt="Screen Shot 2021-09-02 at 3 07 40 PM" src="https://user-images.githubusercontent.com/53482411/131909367-02c7a2dc-90b9-4e0c-afca-5f6ed5a28d1f.png">
 
 ## Description
 
