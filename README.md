@@ -17,7 +17,7 @@ This is an app that allows users to post lost or found animals!
 
 Repository Link: https://github.com/bboyd146/Catz-n-Dogz
 
-Deployed Website Link: https://git.heroku.com/catz-n-dogz1.git
+Deployed Website Link: https://catz-n-dogz1.herokuapp.com/
 
 ## Usage
 
