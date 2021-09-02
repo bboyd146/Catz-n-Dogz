@@ -11,7 +11,7 @@ const postFormHandler = async (event) => {
     if (newBreed && newGender && newContact) {
         const response = await fetch('/api/pet', {
             method: 'POST',
-            body: JSON.stringify({ newBreed, newGender, newContact, newDetails, newFile, newName }),
+            body: JSON.stringify({ newBreed, newGender, newContact, newFile, newName }),
             headers: { 'Content-Type': 'application/json' },
         });
 console.log(response)

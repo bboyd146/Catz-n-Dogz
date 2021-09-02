@@ -2,21 +2,18 @@
     <a href="/animal/{{id}}">
         <header>{{animal_name}}</header>
     </a>
-    <h2>{{pet_name}}</h2>
+    {{!-- <h2>{{pet_name}}</h2> --}}
     <img class="card-img-top" src="{{filename}}" id="img-preview" width="300" height="250" />
     <div class="card-body">
-        <p class="card-text">Breed: {{breed}}</p>
-        <ul>
-            <li>{{sex}}</li>
-            <li>{{is_stray}}</li>
-            <li>{{description}}</li>
-        </ul>
+        <p class="card-text">{{breed}}</p>
+            <h4>{{sex}}</h4>
+            {{!-- <li>{{is_stray}}</li> --}}
+            <h4>{{description}}</h4>
         <footer class="card-footer">
             <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
+                
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Retrieve</button>
+            
                 <small class="text-muted">Days ago</small>
             </div>
         </footer>
