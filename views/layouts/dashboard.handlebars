@@ -53,37 +53,31 @@
     </div>
 
 
-    <main class="col-auto">
+    
         <div class="container register">
             <div class="row">
 
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                
                         <h3 class="register-heading">Post A Pet</h3>
-                        <div class="row register-form">
+                        <div class="row register-form" id="post-form">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Breed *" value="" />
+                                    <input type="text" class="form-control" id="newBreed" placeholder="Breed *" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Male/Female *" value="" />
+                                    <input type="text" class="form-control" id="newGender" placeholder="Male/Female *" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Contact Info *" value="" />
+                                    <input type="text" class="form-control" id="newContact" placeholder="Contact Info *" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Details *" value="" />
-                                    <img class="card-img-top" src="" id="img-preview" />
-                                    <label class="file-upload-container" for="file-upload">
-                                        <input id="file-upload" type="file" style="display:none;">
-                                        Upload an Image
-                                    </label>
+
                                 </div>
 
                                 <div class="form-group">
                                     <div class="maxl">
                                         <label class="radio inline">
-                                            <input type="radio" name="lostFound" value="lost" checked>
+                                            <input type="radio" name="lostFound" value="lost">
                                             <span> Lost </span>
                                         </label>
                                         <label class="radio inline">
@@ -106,6 +100,7 @@
             </div>
 
         </div>
+        <main class="col-auto"></main>
         {{{body}}}
     </main>
 
