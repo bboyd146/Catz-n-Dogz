@@ -7,8 +7,13 @@ router.get('/', async (req, res) => {
         const petData = await Post.findAll({
             include: [
                 {
-                    model: Animal,
-                    attributes: ['animal_name'],
+                    model: Pet,
+                    attributes: [                             'id',
+                    'pet_name',
+                    'sex',
+                    'is_stray',
+                    'breed',
+                ]
                 },
             ],
         });
