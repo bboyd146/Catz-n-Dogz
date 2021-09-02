@@ -33,7 +33,7 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
     try {
         const petData = await Pet.create({
-            pet_name: req.body.newName,
+            pet_name: "",
             sex: req.body.newGender,
             description: req.body.newContact,
             is_stray: true,
