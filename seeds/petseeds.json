@@ -6,24 +6,6 @@
     "breed": "Pug",
     "animal_id": 1,
     "description": "Found this Dog on running around in my neighborhood",
-    "filename": "husky.jpeg"
-},
-{
-    "pet_name": "Jeff",
-    "sex": "Male",
-    "is_stray": "false",
-    "breed": "German Shepherd",
-    "animal_id": 1,
-    "description": "Found this Dog on running around in my neighborhood",
-    "filename": "pitbull.jpeg"
-},
-{
-    "pet_name": "Bitey",
-    "sex": "Female",
-    "is_stray": "true",
-    "breed": "Pitbull",
-    "animal_id": 1,
-    "description": "Found this Dog on running around in my neighborhood",
-    "filename": "strayGer.jpeg"
+    "filename": "http://res.cloudinary.com/catz-n-dogz/image/upload/v1630551995/aenmj0643dqowhmef5zz.png"
 }
 ]
