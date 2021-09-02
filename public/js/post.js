@@ -6,10 +6,12 @@ const postFormHandler = async (event) => {
     const newContact = document.querySelector('#newContact').value.trim();
     const newDetails = document.querySelector('#newDetails').value.trim();
     const newFile = document.querySelector('#file-upload').value.trim();
+    const newName = document.querySelector('#newName').value.trim();
+
     if (newBreed && newGender && newContact) {
         const response = await fetch('/api/pet', {
             method: 'POST',
-            body: JSON.stringify({ newBreed, newGender, newContact, newDetails, newFile}),
+            body: JSON.stringify({ newBreed, newGender, newContact, newFile, newName }),
             headers: { 'Content-Type': 'application/json' },
         });
 console.log(response)
@@ -20,6 +22,8 @@ console.log(response)
         }
     }
 };
+
+
 
 document
     .querySelector('#post-form')
