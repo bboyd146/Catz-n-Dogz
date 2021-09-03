@@ -27,18 +27,18 @@ Post.belongsTo(User, {
 Post.hasMany(Animal, {
 })
 
-Post.hasMany(Pet,{
+Post.hasMany(Pet, {
     foreignKey: 'animal_id',
 })
 
-Pet.belongsToMany(Post, {through: PostPet})
+Pet.belongsToMany(Post, { through: PostPet })
 
-Post.belongsToMany(Pet, {through: PostPet})
+Post.belongsToMany(Pet, { through: PostPet })
 
 
 module.exports = {
     Pet,
-    Animal, 
+    Animal,
     User,
     Post,
     PostPet,

@@ -43,10 +43,10 @@ const postFormHandler = async (event) => {
     if (newBreed && newGender && newContact) {
         const response = await fetch('/api/pet', {
             method: 'POST',
-            body: JSON.stringify({ newBreed, newGender, newContact, newFile, newType}),
+            body: JSON.stringify({ newBreed, newGender, newContact, newFile, newType }),
             headers: { 'Content-Type': 'application/json' },
         });
-console.log(response)
+        console.log(response)
         if (response.ok) {
             document.location.replace('/dashboard');
         } else {
@@ -66,15 +66,3 @@ document
 
 
 
-// let apiKey = 912125249931395
-
-// function getImage() {
-//     fetch('https://912125249931395:Zv42XUvs5fnPjeqvRtD9BjkAl-U@api.cloudinary.com/v1_1/catz-n-dogz/resources/search')
-
-//     .then(function (res) {
-        
-//         console.log(res)
-//     })
-// };
-
-// getImage();
