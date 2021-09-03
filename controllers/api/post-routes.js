@@ -6,7 +6,7 @@ const { Pet, Animal, Post } = require('../../models');
 router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({
-        
+
         });
         res.status(200).json(postData);
     } catch (err) {

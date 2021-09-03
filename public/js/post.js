@@ -14,9 +14,9 @@ const postFormHandler = async (event) => {
             body: JSON.stringify({ newBreed, newGender, newContact, newFile, newName }),
             headers: { 'Content-Type': 'application/json' },
         });
-console.log(response)
+
         if (response.ok) {
-            // document.location.replace('/dashboard');
+            document.location.replace('/dashboard');
         } else {
             alert('Failed upload');
         }
